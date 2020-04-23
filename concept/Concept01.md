@@ -207,9 +207,89 @@
 
 #
 
+##### Annotation
 
+1. `Lombok` 관련
 
+   - 컴파일 시 흔하게 작성하는 작성하는 코드들을 생성해주는 기능
 
+   - `@Setter`: `Setter` 메소드 생성, 3가지 속성 부여 가능
+
+     - `value`
+
+       접근 제한 속성 의미
+
+       기본 값 => `lombok.AccessLevel.PUBLIC`
+
+     - `onMethod`
+
+       `setter` 메소드 생성 시 메소드에 추가할 어노테이션 지정
+
+       jdk 버전에 따라 작성 차이 있음
+
+     - `onParam`
+
+       `setter` 메소드의 파라미터에 어노테이션 사용할 경우
+
+   - `@Data`
+
+     - 세부적인 설정이 필요없는 경우 주로 사용
+     - `@ToString`,`@Getter/Setter`,`@EqualAndHashCode`,`@RequiredArgsConstructor`
+
+   - `@Log4j`
+
+     - 로그 객체 생성
+
+     - `@Log4j`가 존재하지 않을 경우 `@Log` 사용 가능
+
+     - `Spring Legacy Project` 기본 생성됨
+
+       ```java
+       // in JAVA
+       public class LogExample {
+           private static final java.util.logging.Logger log = 
+               java.util.logging.Logger.getLogger(LogExample.class.getName());
+       }
+       
+       // in spring
+       @Log4j // @Log
+       public class LogExample {
+           
+       }
+       ```
+
+       
+
+2. `Spring` 관련
+
+   - `@Component`
+     - 해당 클래스가 스프링에서 객체로 만들어서 관리하는 대상임을 명시함
+     - `@ComponentScan`을 통해 해당 패키지에서  `@Component`가 존재하는 클래스들을 객체로 생성해서 빈으로 관리함
+   - `@Autowired`
+     - 특정 객체에 의존적, 자신에게 해당 타입의 빈을 주입해주라는 표시
+
+   
+
+3. `test` 관련
+
+   - `@RunWith`
+
+     - 테스트 시 필요한 클래스 지정
+     - `spring`은 `SpringJUnit4ClassRunner` 클래스가 대상
+
+   - **`@ContextConfiguration`**
+
+     - 스프링이 실행되면서 어떤 설정 정보를 읽어 들여야 하는지 명시
+
+     - `xml`설정 파일 명시하는 `locations` 속성과,
+
+       `@Configuration`이 적용된 클래스를 명시하는 `classes` 속성이 있음
+
+   - `@Test`
+
+     - `junit`에서 해당 메소드가 `jUnit`상에서 단위 테스트 대상인지 알려줌
+
+#
 
 #### 스프링 4.3 이후 단일 생성자의 묵시적 자동 주입
 
