@@ -49,15 +49,18 @@
 
 #### `Caused by: java.lang.IllegalStateException: Neither GenericXmlContextLoader nor AnnotationConfigContextLoader was able to load an ApplicationContext from [MergedContextConfiguration@5622fdf testClass = SampleTests, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].`
 
-- 에러 있었음
+- 오타 있었음
 
   `@Configuration`->`@ContextConfiguration`
 
+#
 
+#### `Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'lab.spring.sample.Restaurant' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}`
 
-
-
-
+- 오류 못찾겠음..
+- 아니 간단한 예제인데 어디서 연결안됬다고 뜬거지ㅠㅠㅠ
+- xml로 결과보고 java로 바꾼건데 어디서...!!
+- 으어아아아아ㅏㅏㅏ
 
 
 
