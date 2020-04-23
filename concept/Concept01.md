@@ -258,7 +258,13 @@
        }
        ```
 
-       
+   - `@AllArgsConstructor`
+
+     - 인스턴스 변수로 선언된 모든 것을 파라미터로 받는 생성자 생성
+
+   - `@RequiredArgsConstructor`
+
+     - `@Notnull`이나 `final`이 붙은 인스턴스 변수에 대한 생성자 생성
 
 2. `Spring` 관련
 
@@ -293,11 +299,10 @@
 
 #### 스프링 4.3 이후 단일 생성자의 묵시적 자동 주입
 
-
-
-
-
-
+1. 생성자 주입
+   - 
+2. `Setter` 주입
+   - `setter` 메소드나 `Lombok`사용하여 생성 -> `@Autowired`와 같은 어노테이션으로 필요한 객체 주입
 
 #
 
