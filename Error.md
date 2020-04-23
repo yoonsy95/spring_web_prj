@@ -27,15 +27,31 @@
 
 #
 
+#### 테스트 시 `Class<SpringJUnit4ClassRunner> cannot be resolved to a type`
 
+```xml
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>5.0.7.RELEASE</version>
+</dependency>
+```
 
+- spring의 다른 `dependency`들과 버전이 같아야 함
 
+#
 
+#### `Caused by: java.lang.IllegalStateException: SpringJUnit4ClassRunner requires JUnit 4.12 or higher.`
 
+- junit 버전 12이상으로 업그레이드
 
+#
 
+#### `Caused by: java.lang.IllegalStateException: Neither GenericXmlContextLoader nor AnnotationConfigContextLoader was able to load an ApplicationContext from [MergedContextConfiguration@5622fdf testClass = SampleTests, locations = '{}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextCustomizers = set[[empty]], contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].`
 
+- 에러 있었음
 
+  `@Configuration`->`@ContextConfiguration`
 
 
 

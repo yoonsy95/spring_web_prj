@@ -187,19 +187,25 @@
 
 #
 
-#### 의존성 주입 테스트
-
-
-
-
-
-
-
-
-
-#
-
 #### 스프링이 동작하면서 생기는 일
+
+![image-20200423190157226](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200423190157226.png)
+
+
+
+1. 스프링 프레임워크가 시작되면 `context`라는 메모리 영역을 만듦
+
+   스프링에서는 `ApplicationContext`라는 이름의 객체가 생성됨
+
+2. `root-context.xml` 파일은 객체를 생성하고 관리해야하는 객체들에 대한 설정이 포함되어 있음
+
+3. `root-context.xml`에 설정되어 있는 `<context:component:scan>` 태그의 내용을 통하여 `'lab.spring.sample'` 패키지를 스캔함
+
+4. 해당 패키지의 클래스들 중 `@Component`라는 어노테이션이 존재하는 클래스의 인스턴스를 생성함
+
+5. `Restaurant`객체에는 `Chef`객체가 필요하다는 `@Autowired` 어노테이션이 설정되어있어 스프링은 `Chef` 객체의 레퍼런스를 `Restaurant` 객체에 주입함
+
+
 
 
 
