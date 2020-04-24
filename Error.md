@@ -58,11 +58,27 @@
 #### `Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'lab.spring.sample.Restaurant' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}`
 
 - 오류 못찾겠음..
+
 - 아니 간단한 예제인데 어디서 연결안됬다고 뜬거지ㅠㅠㅠ
-- xml로 결과보고 java로 바꾼건데 어디서...!!
+
+- `xml`로 결과보고 `java`로 바꾼건데 어디서...!!
+
+- `setter/getter`, `toString`까지 생성된 것 확인
+
+- ...연결이 안된건가 그럼??
+
+- `@ContextConfiguration(classes= {RootConfig.class})` 
+
+  이걸로 연결된거 아닌가..?
+
 - 으어아아아아ㅏㅏㅏ
 
+- 나중에 다시 볼 것!!
 
+#
 
+#### SQL Developer 사용자 등록시 `The Network Adapter could not establish the connection`
 
+- oracle 싹 지우고 11gR2부터 다시 설치
+- [Deinstall Oracle](https://rainflys.tistory.com/202)
 

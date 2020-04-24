@@ -308,19 +308,26 @@
 
 ## 스프링과 Oracle DataBase 연동
 
+- SQL Developer 사용자 등록시 `the network adapter could not establish the connection` 에러나서 지우고 다시 깔기로 함
+- [Deinstall Oracle](https://rainflys.tistory.com/202)
+
+#
+
 #### 오라클 설치
 
-
+- [Download 11gR2](https://www.oracle.com/database/technologies/112010-win64soft.html) 
+- [Install 11gR2](https://recollectionis.tistory.com/160)
 
 #
 
 #### sql developer 설치
 
-
+- [Download SQL Developer](https://www.oracle.com/tools/downloads/sqldev-downloads.html) 
+- [Install SQL Developer](https://copycoding.tistory.com/209)
 
 #
 
-#### 프로직트의 jdbc 연결
+#### 프로젝트의 jdbc 연결
 
 
 
