@@ -428,9 +428,65 @@
 
 #
 
-#### log4jdbc-log4j2 설정
+#### `log4jdbc-log4j2` 설정
 
+- `PreparedStatement`의 ? 값을 확인하는 기능
 
+  ```xml
+  <!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4 -->
+  <dependency>
+      <groupId>org.bgee.log4jdbc-log4j2</groupId>
+      <artifactId>log4jdbc-log4j2-jdbc4</artifactId>
+      <version>1.16</version>
+  </dependency>
+  ```
+
+- 로그 설정 파일 추가
+
+  - src/main/resources에 log4.xml과 log4jdbc.log4j2.properties 파일 추가
+
+    ```properties
+    # log4jdbc.log4j2.properties 내용
+    log4jdbc.spylogdelegator.name=net.sf.log4jdbc.log.slf4j.Slf4jSpyLogDelegator
+    ```
+
+- JDBC 연결 정보 수정
+
+  ```xml
+  <!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> -->
+  <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+  
+  <!-- <property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl" /> -->
+  <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl"/>
+  ```
+  
+- 로그가 10개가 나옴 => 레벨 조정
+
+  ```xml
+  <!-- src/main/resources/log4j.xml -->
+  <!-- Root Logger -->
+  <root>
+      <priority value="info" />
+      <appender-ref ref="console" />
+  </root>
+  
+  <!-- warn -> info // INFO: ~~~ 보이지 않도록 함 -->
+<logger name="jdbc.audit">
+      <level value="warn" />
+  </logger>
+  <logger name="jdbc.resultset">
+      <level value="warn" />
+  </logger>
+  <logger name="jdbc.connection">
+      <level value="warn" />
+  </logger>
+  ```
+  
+  ...ㅎ.. 왜 그대로짘ㅋㅋ큐ㅠ
+  
+- 로그레벨
+
+  (L) `TRACE` > `DEBUG` > `INFO` > `WARN `> `ERROR` > `FATAL` (H)
 
 
 
