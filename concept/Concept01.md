@@ -330,8 +330,14 @@
 #### 커넥션 풀(`Connection Pool`)
 
 - 여러 사용자를 동시에 처리해야 하는 경우 데이터베이스 연결 위해 사용
+
 - `Java`에서는 `DataSource` 인터페이스를 통해 사용함
+
 - 미리 연결을 맺어주고 반환하는 구조로 성능 향상 도움 됨
+
+- 예제 구조
+
+  ![image-20200425070541873](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200425070541873.png)
 
 #
 
@@ -339,13 +345,70 @@
 
 #### MyBatis
 
+- SQL mapping framework
 
+- 장점
+
+  - 기존 SQL 그대로 활용할 수 있으며 진입장벽이 낮음
+  - 자동으로 `Connection close()` 가능
+  - Mybatis 내부적으로 `PreparedStatement` 처리
+  - `#{prop}`와 같이 속성을 지정하면 내부적으로 자동 처리
+  - 리턴 타입 지정 시 자동으로 객체 생성 및 `ResultSet` 처리
+
+- 관련 라이브러리
+
+  - `spring-jdbc/spring-tx`
+
+    스프링에서 데이터베이스 처리와 트랜잭션 처리
+
+    ```xml
+    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis</artifactId>
+        <version>3.4.6</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
+    <dependency>
+        <groupId>org.mybatis</groupId>
+        <artifactId>mybatis-spring</artifactId>
+        <version>1.3.2</version>
+    </dependency>
+    ```
+
+  - `mybatis/mybatis-spring`
+
+    MyBatis와 Spring 연동용 라이브러리
+
+    ```xml
+    <!-- 스프링에서 데이터베이스 처리와 트랜잭션 처리 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${org.springframework-version}</version>
+    </dependency>
+    ```
+
+    
+
+- `SQLSessionFactory`
+
+  - 내부적으로 `SQLSession` 생성
+  - `SQLSession`을 통해 `Connection` 생성하거나 원하는 SQL 전달하고 결과 리턴받는 구조로 작성됨
 
 #
 
 #### 스프링과 연동 처리
 
+#####  `MyBatis`의 `Mapper`
 
+- `SQLSessionFactory`를 이용하는 것보다 SQL 처리 설정 분리하고 자동으로 처리되는 방식이 더 편함
+- `MyBatis-Spring` 이용 시 xml과 인터페이스 + 어노테이션 형태로 작성 가능
 
 #
 

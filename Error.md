@@ -82,3 +82,30 @@
 - oracle 싹 지우고 11gR2부터 다시 설치
 - [Deinstall Oracle](https://rainflys.tistory.com/202)
 
+#
+
+#### TimeMapperTest.java 실행시 오류
+
+#### JUnit 
+
+#### `org.springframework.jdbc.UncategorizedSQLException: Error attempting to get column 'SYSDATE' from result set.  Cause: java.sql.SQLException: 지원되지 않는 문자 집합(클래스 경로에 orai18n.jar 추가): KO16MSWIN949`
+
+; uncategorized SQLException; SQL state [99999]; error code [17056]; 지원되지 않는 문자 집합(클래스 경로에 orai18n.jar 추가): KO16MSWIN949; nested exception is java.sql.SQLException: 지원되지 않는 문자 집합(클래스 경로에 orai18n.jar 추가): KO16MSWIN949
+
+#### Console
+
+`INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+INFO : org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loaded: [DB2, Derby, H2, HDB, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase]`
+
+- orai18n.jar 추가로 등록
+
+``` xml
+<!-- https://mvnrepository.com/artifact/cn.easyproject/orai18n -->
+<dependency>
+    <groupId>cn.easyproject</groupId>
+    <artifactId>orai18n</artifactId>
+    <version>12.1.0.2.0</version>
+</dependency>
+```
+
+#
