@@ -306,7 +306,7 @@
 
 #
 
-## 스프링과 Oracle DataBase 연동
+## Part 01. 03 스프링과 Oracle DataBase 연동
 
 - SQL Developer 사용자 등록시 `the network adapter could not establish the connection` 에러나서 지우고 다시 깔기로 함
 - [Deinstall Oracle](https://rainflys.tistory.com/202)
@@ -341,7 +341,7 @@
 
 #
 
-## MyBatis와 스프링 연동
+## Part01. 04 MyBatis와 스프링 연동
 
 #### MyBatis
 
