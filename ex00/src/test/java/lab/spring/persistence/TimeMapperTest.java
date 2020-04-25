@@ -20,7 +20,14 @@ public class TimeMapperTest {
 	@Test
 	public void testGetTime() {
 		log.info(timeMapper.getClass().getName());
-		System.out.println();
 		log.info(timeMapper.getTime());
 	}
+	
+	@Test
+	public void testGetTime2() {
+		System.out.println();
+		log.info("getTime2");
+		log.info(timeMapper.getTime2());
+	}
+	
 }

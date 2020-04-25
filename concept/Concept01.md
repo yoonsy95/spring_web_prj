@@ -408,7 +408,23 @@
 #####  `MyBatis`의 `Mapper`
 
 - `SQLSessionFactory`를 이용하는 것보다 SQL 처리 설정 분리하고 자동으로 처리되는 방식이 더 편함
+
 - `MyBatis-Spring` 이용 시 xml과 인터페이스 + 어노테이션 형태로 작성 가능
+
+- SQL이 길어질 경우 XML 이용 => `MapperInterface`와 동시 사용
+
+  - XML 파일은 `MapperInterface`와 같은 이름을 사용 할 것
+
+  - 위치
+
+    - `MapperInterface`와 같은 폴더 내
+    - `src/main/resources`에 XML 폴더 생성
+
+  - 메소드 선언 => 인터페이스
+
+    SQL 처리 => XML
+
+  - id와 메소드 이름 같아야 서로 인식됨
 
 #
 
