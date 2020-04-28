@@ -1,8 +1,18 @@
-### Part1
+## Part01
 
 #### pom.xml 빨간 경고
 
 - `C:\Users\yegyo\.m2`의 `repository` 삭제 -> `eclipse` 재실행
+
+#
+
+#### `Multiple annotations found at this line:`
+`- schema_reference.4: Failed to read schema document 'https://maven.apache.org/maven-v4_0_0.xsd', because 1) could not find the document; 2) the document could not be read; 3) the root element 
+ of the document is not <xsd:schema>.`
+
+`- cvc-elt.1: Cannot find the declaration of element 'project'.`
+
+- ..? 해당 오류 부분을 다른 pom.xml을 부분을 붙여넣으니 잘 됨
 
 #
 
@@ -109,3 +119,6 @@ INFO : org.springframework.jdbc.support.SQLErrorCodesFactory - SQLErrorCodes loa
 ```
 
 #
+
+## Part02
+
