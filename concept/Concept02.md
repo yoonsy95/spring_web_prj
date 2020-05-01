@@ -2,7 +2,7 @@
 
 #### 스프링 MVC 프로젝트의 내부 구조
 
-![image-20200427140558741](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200427140558741.png)
+![image-20200502025917051](imgs/image-20200502025917051.png)
 
 
 
@@ -39,7 +39,7 @@
 
   브라우저에 전송한 정보를 처리
 
-  ![image-20200502023920163](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200502023920163.png)
+  ![image-20200502025829888](imgs/image-20200502025829888.png)
 
 - Sping MVC는 개발자의 코드와 Servlet/JSP의 중간 역할이기에
 
