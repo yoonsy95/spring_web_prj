@@ -2,7 +2,7 @@
 
 #### spring 구조
 
-<img src="C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200422174624978.png" alt="image-20200422174624978" style="zoom:80%;" />
+![image-20200502030717115](imgs/image-20200502030717115.png)
 
 
 
@@ -189,7 +189,7 @@
 
 #### 스프링이 동작하면서 생기는 일
 
-![image-20200423190157226](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200423190157226.png)
+![image-20200423190157226](imgs/image-20200423190157226-1588356225079.png)
 
 
 
@@ -337,7 +337,7 @@
 
 - 예제 구조
 
-  ![image-20200425070541873](C:\Users\yegyo\AppData\Roaming\Typora\typora-user-images\image-20200425070541873.png)
+  ![image-20200502030200199](imgs/image-20200502030200199.png)
 
 #
 
